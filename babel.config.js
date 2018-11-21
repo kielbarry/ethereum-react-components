@@ -8,6 +8,8 @@ module.exports = {
       "regenerator": true,
       "useESModules": false
     }],
-    '@babel/plugin-proposal-class-properties'],
+    '@babel/plugin-proposal-class-properties',
+    'babel-plugin-styled-components'
+  ],
   presets: ['@babel/preset-env'],
 };

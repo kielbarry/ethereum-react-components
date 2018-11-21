@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import i18n from '../../i18n';
 import { InputPassword } from '..';
 import PropTypes from 'prop-types';
@@ -14,7 +14,7 @@ let Mist = {
   }
 }
 
-class CreateAccount extends React.Component {
+class CreateAccount extends Component {
   static displayName = 'CreateAccount'
 
   static propTypes = {

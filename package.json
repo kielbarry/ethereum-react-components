@@ -28,6 +28,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-styled-components": "^1.8.0",
     "css-loader": "^1.0.1",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.1.0",
@@ -58,6 +59,7 @@
     "ethereum-blockies": "git+https://github.com/ethereum/blockies.git",
     "identicon.js": "^2.3.3",
     "jazzicon": "^1.5.0",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "styled-components": "^4.1.1"
   }
 }
