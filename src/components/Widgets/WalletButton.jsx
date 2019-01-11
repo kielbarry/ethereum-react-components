@@ -6,13 +6,13 @@ export default class WalletButton extends Component {
   static displayName = 'WalletButton';
 
   static propTypes = {
-    /* Display text to be displayed as button symbol */
+    /** Display text to be displayed as button symbol */
     buttonSymbol: PropTypes.string,
-    /* Custom classes to be applied */
+    /** Custom classes to be applied */
     classes: PropTypes.string,
-    /* Display text describing button action */
+    /** Display text describing button action */
     innerText: PropTypes.string,
-    /* Callback to be executed onClick */
+    /** Callback to be executed onClick */
     onClick: PropTypes.func,
   };
 
