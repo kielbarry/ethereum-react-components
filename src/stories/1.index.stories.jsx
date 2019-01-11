@@ -14,7 +14,8 @@ import {
   Input,
   TextArea,
   Select,
-  FileChooser
+  FileChooser,
+  WalletButton,
   // ValidatedField,
   // ConverterForm
 } from '../components'
@@ -166,3 +167,12 @@ storiesOf('Widgets/Eth QR', module)
     <EthAddress address="0xF5A5d5c30BfAC14bf207b6396861aA471F9A711D" />
   ))
   .add('click -> copy to clipboard', () => <span>placeholder</span>)
+
+storiesOf('Widgets/WalletButton', module).add('default', () => (
+  <WalletButton
+    classes=""
+    innerText="Add Wallet Contract"
+    buttonSymbol="+"
+    onClick={() => alert('WalletButton clicked!')}
+  />
+))

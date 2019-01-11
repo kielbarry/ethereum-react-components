@@ -15,6 +15,7 @@ import TextArea from './Widgets/Form/TextArea'
 import Select from './Widgets/Form/Select'
 import FileChooser from './Widgets/Form/FileChooser'
 import ValidatedField from './Widgets/Form/ValidatedField'
+import WalletButton from './Widgets/WalletButton'
 import ConverterForm from './Tools/EthConverterForm'
 import NetworkChooser from './Network/NetworkChooser'
 import RpcTester from './Network/RPC/RpcTester'
@@ -60,5 +61,6 @@ export {
   TokenListForItem,
   TxHistory,
   ValidatedField,
+  WalletButton,
   utils
 }
