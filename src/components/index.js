@@ -62,7 +62,7 @@ export {
   Spinner,
   TokenListForItem,
   TxHistory,
-  WalletButton,
   ValidatedField,
+  WalletButton,
   utils
 }
