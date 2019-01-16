@@ -18,7 +18,6 @@ import {
   FileChooser,
   WalletButton
 } from '../components'
-// import { WalletButton } from '../components/Widgets/WalletButton'
 import Checkmark from '../components/Widgets/AnimatedIcons/Checkmark'
 import Cross from '../components/Widgets/AnimatedIcons/AnimatedCross'
 
