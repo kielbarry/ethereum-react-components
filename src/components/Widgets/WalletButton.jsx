@@ -3,36 +3,37 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 export default class WalletButton extends Component {
-  static displayName = 'WalletButton';
+  static displayName = 'WalletButton'
 
   static propTypes = {
     /** Display text to be displayed as button symbol */
     buttonSymbol: PropTypes.string,
-    /** Custom classes to be applied */
-    classes: PropTypes.string,
     /** Display text describing button action */
     innerText: PropTypes.string,
     /** Callback to be executed onClick */
-    onClick: PropTypes.func,
-  };
+    onClick: PropTypes.func
+  }
 
   static defaultProps = {
     buttonSymbol: '+',
-    classes: '',
-    innerText: '',
-    onClick: (e) => {
-      console.log('Default onClick function ', e)
-    },
-  };
+    innerText: ''
+  }
+
+  handleClick = e => {
+    const { onClick } = this.props
+    if (onClick) {
+      onClick(e)
+    }
+  }
 
   render() {
-    const { buttonSymbol, classes, innerText, onClick } = this.props
+    const { buttonSymbol, innerText } = this.props
     return (
-      <StyledButton className={`${classes}`} onClick={onClick}>
-        <StyledDiv> { buttonSymbol } </StyledDiv>
-        <StyledH3> { innerText } </StyledH3>
+      <StyledButton onClick={this.handleClick}>
+        <StyledDiv> {buttonSymbol} </StyledDiv>
+        <StyledH3> {innerText} </StyledH3>
       </StyledButton>
-    );
+    )
   }
 }
 
@@ -47,15 +48,28 @@ const StyledButton = styled.button`
   padding-right: 16px;
   margin-right: 16px;
   margin-bottom: 16px;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
+  background: none;
   -webkit-transition: background-color 1600ms, opacity 400ms;
   -moz-transition: background-color 1600ms, opacity 400ms;
   -o-transition: background-color 1600ms, opacity 400ms;
   transition: background-color 1600ms, opacity 400ms;
-  float: left;
+  color: #02a8f3;
+  outline: 0;
+  cursor: pointer;
+  font-size: 100%;
+  :hover {
+    background-color: #ffffff;
+  }
+  :focus {
+    border-bottom: 1px dotted #02a8f3;
+  }
+  :active {
+    border: 0;
+    transform: scale(0.95);
+  }
 `
 
 const StyledDiv = styled.div`
@@ -77,10 +91,10 @@ const StyledDiv = styled.div`
   min-width: 44.8px;
   padding: 0 16px;
   background-color: #02a8f3;
-  text-align: center;
   line-height: 100%;
   color: #fafafa;
   font-size: 1.8em;
+  text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -89,11 +103,12 @@ const StyledDiv = styled.div`
 const StyledH3 = styled.h3`
   margin: 0;
   margin-top: 0;
-  text-align: left;
   color: #02a8f3;
   max-width: 140.8px;
-  float: left;
+  padding: 0;
   text-transform: uppercase;
+  text-align: left;
+  align-items: center;
   font-weight: 500;
   font-size: 1em;
 `

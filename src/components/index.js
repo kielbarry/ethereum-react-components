@@ -7,6 +7,7 @@ import NodeInfoBox from './Network/NodeInfo/NodeInfoBox'
 import Spinner from './Widgets/AnimatedIcons/Spinner'
 import Pulse from './Widgets/AnimatedIcons/Pulse'
 import Button from './Widgets/Button'
+import WalletButton from './Widgets/WalletButton'
 import Checkbox from './Widgets/Checkbox'
 import AddressSelect from './Widgets/Form/AddressSelect'
 import RadioButton from './Widgets/Form/RadioButton'
@@ -61,6 +62,7 @@ export {
   Spinner,
   TokenListForItem,
   TxHistory,
+  WalletButton,
   ValidatedField,
   utils
 }

@@ -15,8 +15,10 @@ import {
   Input,
   TextArea,
   Select,
-  FileChooser
+  FileChooser,
+  WalletButton
 } from '../components'
+// import { WalletButton } from '../components/Widgets/WalletButton'
 import Checkmark from '../components/Widgets/AnimatedIcons/Checkmark'
 import Cross from '../components/Widgets/AnimatedIcons/AnimatedCross'
 
@@ -117,6 +119,14 @@ storiesOf('Widgets/Identicon', module)
 
 storiesOf('Widgets/Animations/Spinner', module).add('default', () => (
   <Spinner />
+))
+
+storiesOf('Widgets/WalletButton', module).add('default', () => (
+  <WalletButton
+    buttonSymbol="+"
+    innerText="Add Wallet Contract"
+    onClick={() => {}}
+  />
 ))
 
 storiesOf('Widgets/Animations/Pulse', module)
